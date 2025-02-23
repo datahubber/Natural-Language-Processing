@@ -1,0 +1,16 @@
+seed: 2007
+
+comp_dataset: eedi-mining-misconceptions-in-mathematics
+input_dir: ./data/synthetic_claude # change to the directory containing the synthetic examples
+
+model: gpt-4o
+
+batch_size: 16
+sleep_time: 1
+
+upload_to_kaggle: false
+output_dir: ./data/oai_evals
+upload_dataset: conjuring92/eedi-oai-evals
+
+existing_dirs:
+  - ./data/oai_evals/stats

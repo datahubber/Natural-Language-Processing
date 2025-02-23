@@ -1,0 +1,19 @@
+seed: 2007
+
+input_dataset: conjuring92/eedi-cot-gen-base
+input_file: pair.csv
+
+model: claude-3-5-sonnet-latest
+
+batch_size: 16
+sleep_time: 1
+
+upload_to_kaggle: false
+output_dir: ./data/sonnet_cot
+upload_dataset: conjuring92/sonnet-cot
+
+existing_dirs:
+  - ./data/sonnet_cot/stats
+
+
+

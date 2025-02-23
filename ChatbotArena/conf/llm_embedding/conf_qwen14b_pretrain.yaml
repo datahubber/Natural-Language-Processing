@@ -1,0 +1,106 @@
+debug: false
+seed: 3885
+
+fold: 0
+enable_cuda_optimizations: true
+full_fit: false
+local_rank: # will be populated by training script
+
+use_wandb: false
+
+dataset:
+  comp_dataset:  eedi-mining-misconceptions-in-mathematics
+  input_dataset: conjuring92/eedi-embed-pretrain-mix-expanded
+  fold_dataset: conjuring92/eedi-five-folds
+
+model:
+  backbone_path: Qwen/Qwen2.5-14B
+  trust_remote_code: false
+  max_length: 196 # 256
+  sentence_pooling_method: last
+  gradient_checkpointing: true
+  compile: true
+  attn_implementation: flash_attention_2
+  negatives_cross_device: false
+  padding_side: left
+  add_eos_token: true
+
+  use_bidirectional: false
+  use_bnb: false
+  use_lora: true
+
+  lora:
+    r: 64
+    lora_alpha: 128
+    lora_dropout: 0.05
+
+    target_modules:
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+      - gate_proj
+      - up_proj
+      - down_proj
+
+    modules_to_save: []
+
+  max_temperature: 0.01
+  min_temperature: 0.01
+
+  n_neighbour: 512
+  use_distillation: false
+
+train_params:
+  retriever_bs: 196
+  sub_batch_size: 8
+  query_bs: 128
+  content_bs: 128
+
+  load_hard_negatives: false
+  hard_negative_dataset: # not used
+  hard_negative_file: # not used
+  teacher_logits_file: # not used
+
+  num_hard_negatives: 0
+  negative_depth_end: 256
+
+  iterative_hard_negatives: false
+  iterative_hard_negatives_trigger: 99
+  negative_depth_start: 64
+
+  warmup_pct: 0.2
+  num_epochs: 4
+  gradient_accumulation_steps: 1
+  patience: 20
+  eval_at_start: false
+
+  batch_sampling:
+    - random
+
+  batch_sampling_weights:
+    - 1.0
+
+optimizer:
+  name: AdamW8bit
+
+  lr: 1e-5
+  lr_lora_a: 1e-5
+  lr_lora_b: 5e-5
+  lr_embed_tokens: 8e-6
+
+  max_grad_norm: 16.0
+  adam_beta_1: 0.9
+  adam_beta_2: 0.95
+  adam_epsilon: 1e-8
+  weight_decay: 1e-2
+
+outputs:
+  model_dir: ../models/eedi_embed_qwen14b_pretrain_lora
+
+wandb:
+  project: eedi-dev
+  run_name: encode-qwen14b-pretrain-expanded
+  all_data_flag: false
+  tags:
+    - retriever

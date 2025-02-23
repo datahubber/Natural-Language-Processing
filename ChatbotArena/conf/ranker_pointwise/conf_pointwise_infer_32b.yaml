@@ -1,0 +1,49 @@
+seed: 9989
+debug: false
+local_rank: 0
+use_wandb: false
+
+fold: 0
+full_fit: false
+enable_cuda_optimizations: true
+
+k_shot: 0 # 2 # 2
+num_gpus: 2
+use_cot: false
+
+dataset:
+  fold_dataset: conjuring92/eedi-five-folds
+  input_dataset: conjuring92/eedi-ranker-oof-base
+  comp_dataset: eedi-mining-misconceptions-in-mathematics
+  label_dataset: conjuring92/eedi-silver-v3
+
+infer_on_train: false
+
+model:
+  backbone_path: /root/.cache/kagglehub/models/conjuring92/eedi-ranker-32b-cv663-dec7-awq/transformers/default/1
+  max_length: 768
+  num_labels: 1
+  num_proc: 8
+  compile_model: false
+  trust_remote_code: false
+  attn_implementation: flash_attention_2
+
+  tokenizer:
+    truncation_side: left
+    use_fast: true
+
+  use_bnb: true
+ 
+train_params:
+  per_device_train_group_size: 8
+  per_device_eval_batch_size: 16
+  gradient_accumulation_steps: 1
+
+outputs:
+  model_dir: ../models/qwen_pointwise_32b
+
+wandb:
+  project: eedi-dev
+  run_name: qwen-ranker-32b
+  tags:
+    - qwen
