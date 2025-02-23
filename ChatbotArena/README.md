@@ -4,3 +4,5 @@ This competition challenges you to predict which responses users will prefer in 
 This is a followup to the first Human Preference Prediction competition, which focused on English conversations. This iteration will require working with conversations in many different languages.  
 
 https://www.kaggle.com/competitions/wsdm-cup-multilingual-chatbot-arena
+
+Rank: 22nd out of 950 teams.
