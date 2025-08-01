@@ -1,0 +1,35 @@
+# Core ML libraries
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.12.0
+accelerate>=0.20.0
+
+# Interpretability and analysis
+einops>=0.6.0
+sentencepiece>=0.1.99
+tokenizers>=0.13.0
+
+# Data processing and visualization
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Jupyter and notebook support
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+tqdm>=4.65.0
+
+# Utilities
+requests>=2.31.0
+huggingface-hub>=0.15.0
+wandb>=0.15.0  # Optional: for experiment tracking
+
+# For cloud GPU support
+gputil>=1.4.0
+psutil>=5.9.0
+
+# Additional analysis tools
+scikit-learn>=1.3.0
+scipy>=1.10.0 
