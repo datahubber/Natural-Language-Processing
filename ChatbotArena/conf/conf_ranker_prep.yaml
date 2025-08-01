@@ -1,0 +1,24 @@
+fold: 0
+full_fit: false
+dataset:
+  comp_dataset: conjuring92/eedi-silver-v3
+  fold_dataset: conjuring92/eedi-five-folds
+  stage_one_path: ./data/stage_one/silver_v3_qwen_14b.parquet
+
+train_sampling:
+  high_cutoff: 32 # keep top `high_cutoff` retrieval results with probability `high_p`
+  high_p: 0.9
+  mid_cutoff: 48 # keep top high_cutoff to mid_cutoff retrieval results with probability `mid_p`
+  mid_p: 0.02
+  low_cutoff: 64 # keep top mid_cutoff to low_cutoff retrieval results with probability `low_p`
+  low_p: 0.02
+  min_candidates: 24 # 32
+  max_candidates: 24 # 32
+
+prep_valid: false
+valid_negative_depth: 48
+output_dir: ./data/ranker_data/eedi-ranker-silver-v3
+
+upload_to_kaggle: true
+upload_dataset: conjuring92/eedi-ranker-silver-v3
+

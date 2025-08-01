@@ -1,0 +1,19 @@
+seed: 461
+fold: 0
+model: claude-3-5-sonnet-latest
+
+dataset:
+  comp_dataset: eedi-mining-misconceptions-in-mathematics
+  cluster_dataset: conjuring92/eedi-misconception-clusters
+
+batch_size: 16
+n_ex_in_context: 5
+num_gen_per_group: 5
+sleep_time: 1
+
+upload_to_kaggle: false
+output_dir: ./data/synthetic_claude
+upload_dataset: conjuring92/eedi-synthetic-claude
+
+existing_dirs:
+  - ./data/synthetic_claude/stats

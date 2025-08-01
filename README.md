@@ -1,90 +1,63 @@
-# Mechanistic Interpretability Assessment
+# Natural-Language-Processing
 
-This repository contains the implementation and analysis for the mechanistic interpretability assessment, focusing on reproducing and extending Jake Ward's monosemanticity research.
+NLP and Large Language Model applications.
 
-## Background
+## About
 
-This assessment explores mechanistic interpretability concepts including:
-- **Toy Models of Superposition**: Understanding how features are represented in hidden layers
-- **Monosemanticity**: The concept of neurons responding to specific, interpretable features
-- **Sparse Autoencoders (SAE)**: Auxiliary networks for feature extraction and analysis
+This repository contains various NLP and LLM projects including:
 
-## Key Resources
+### Projects
 
-1. [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html)
-2. [Monosemanticity at Home](https://jakeward.substack.com/p/monosemanticity-at-home-my-attempt)
-3. [Monosemanticity Reproduction Repository](https://github.com/jnward/monosemanticity-repro)
+- **ChatbotArena**: Chatbot evaluation and ranking systems
+- **FineTuningMistral**: Fine-tuning experiments with Mistral models
+- **MechanisticInterpretability**: Neural network interpretability analysis
 
-## Project Structure
+## Mechanistic Interpretability Assessment
 
-```
-├── README.md
-├── requirements.txt
-├── notebooks/
-│   ├── 01_activations_analysis.ipynb
-│   ├── 02_sae_training.ipynb
-│   ├── 03_feature_analysis.ipynb
-│   └── 04_stheno_experiment.ipynb
-├── src/
-│   ├── __init__.py
-│   ├── activations.py
-│   ├── sae.py
-│   ├── feature_extraction.py
-│   └── utils.py
-├── data/
-├── models/
-└── results/
-```
+The `MechanisticInterpretability/` folder contains a comprehensive implementation of mechanistic interpretability analysis focusing on neural network activations and sparse autoencoders.
 
-## Assessment Tasks
+### Key Features
 
-### 1. Reproduce Jake's Experiment
-- Set up cloud GPU environment (RunPod recommended)
-- Navigate versioning challenges
-- Successfully run the original experiment
+- **Activation Analysis**: Complete extraction and visualization of neural network activations
+- **Sparse Autoencoders (SAE)**: Feature extraction and monosemanticity analysis
+- **M2 Mac Optimization**: Metal Performance Shaders (MPS) acceleration support
+- **Self-contained Demo**: No network connection required for core functionality
 
-### 2. Understand and Discuss Results
-- Analyze activations and their meaning
-- Explain SAE purpose and architecture
-- Discuss feature extraction results
+### Quick Start
 
-### 3. Bonus: Extend to Stheno-8B
-- Apply techniques to a roleplay model
-- Handle multi-layer MLP architecture
-- Focus on last layer MLP analysis
-
-## Key Questions to Address
-
-1. **What are activations?** How to find activations on particular tokens for given text?
-2. **SAE Purpose:** Why train auxiliary Sparse Autoencoder networks?
-3. **SAE Architecture:** Why does SAE hidden layer have higher dimensionality than original network?
-
-## Setup Instructions
-
-1. Install dependencies:
 ```bash
-pip install -r requirements.txt
+cd MechanisticInterpretability
+chmod +x setup_local.sh
+./setup_local.sh
+source venv/bin/activate
+jupyter notebook
 ```
 
-2. Set up cloud GPU environment (RunPod):
-   - Create account and add credits
-   - Launch Jupyter notebook instance
-   - Upload project files
+### Core Questions Answered
 
-3. Run experiments:
-   - Start with `01_activations_analysis.ipynb`
-   - Progress through notebooks sequentially
-   - Document results and insights
+1. **What are activations?** - Neural network outputs that represent internal states
+2. **How to find activations on specific tokens?** - Using PyTorch hooks for extraction
+3. **Purpose of Sparse Autoencoders (SAE)?** - Feature extraction and monosemanticity analysis
 
-## Expected Deliverables
+### Project Structure
 
-- Written report (PDF/Markdown) with analysis and results
-- Code and Jupyter notebooks
-- Experimental setup documentation
-- Research proposal for extensions
+```
+MechanisticInterpretability/
+├── notebooks/02_simple_activations_demo.ipynb  # Main demonstration
+├── src/                                        # Source code modules
+├── docs/                                       # Documentation
+├── requirements.txt                            # Dependencies
+└── setup_local.sh                             # Setup script
+```
 
-## Notes
+For detailed documentation, see the `MechanisticInterpretability/` folder.
 
-- AI tools are encouraged for this assessment
-- Up to $50 GPU credits available for RunPod experiments
-- Focus on understanding and practical implementation 
+## Resources
+
+- **ChatbotArena**: Advanced chatbot evaluation and ranking
+- **FineTuningMistral**: Model fine-tuning experiments
+- **MechanisticInterpretability**: Neural network interpretability research
+
+## Contributing
+
+Each project folder contains its own documentation and setup instructions.
