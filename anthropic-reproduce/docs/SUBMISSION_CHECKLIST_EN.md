@@ -1,4 +1,4 @@
-# 📋 Submission Checklist - Mechanistic Interpretability Assessment
+# 📋 Research Documentation Checklist - Mechanistic Interpretability Assessment
 
 ## ✅ Completed Core Content
 
@@ -59,7 +59,7 @@
 - ✅ Memory usage optimization
 - ✅ Processing speed benchmarks
 
-## 📝 Submission Content Checklist
+## 📝 Research Documentation Checklist
 
 ### Required Files
 1. **Written Report** (you need to create)
@@ -118,7 +118,7 @@ Based on notebook results, create a written report including:
 - ✅ Complete documentation
 - ✅ Extensibility
 
-### Assessment Coverage
+### Research Coverage
 - ✅ All core questions
 - ✅ Actual code implementation
 - ✅ Result visualization
@@ -136,6 +136,6 @@ Your project already includes:
 **All you need to complete**:
 1. Run notebook experiments
 2. Create written report
-3. Organize submission files
+3. Organize research files
 
 All technical foundations are ready! 🚀 

@@ -1,6 +1,6 @@
 # Local M2 Mac Setup Guide
 
-Congratulations! Your M2 Mac has been successfully set up to run the mechanistic interpretability assessment.
+Congratulations! Your M2 Mac has been successfully set up to run the mechanistic interpretability research.
 
 ## ✅ Setup Status
 
@@ -30,7 +30,7 @@ Open browser and visit: `http://localhost:8888`
 
 In Jupyter, open: `notebooks/01_activations_analysis_local.ipynb`
 
-## 📚 Assessment Content
+## 📚 Research Content
 
 ### Core Question Answers
 
@@ -91,7 +91,7 @@ In Jupyter, open: `notebooks/01_activations_analysis_local.ipynb`
 - Monosemanticity metrics
 - Sparsity analysis
 
-## 🎯 Assessment Submission
+## 🎯 Research Documentation
 
 ### Required Content
 1. **Written Report** (PDF/Markdown)
@@ -147,4 +147,4 @@ Now you can begin your mechanistic interpretability analysis. Remember:
 3. **Record Discoveries**: Document your observations and insights
 4. **Innovate**: Propose your own research ideas
 
-Good luck with your assessment! 🚀 
+Good luck with your research! 🚀 

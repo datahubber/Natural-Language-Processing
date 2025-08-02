@@ -1,6 +1,6 @@
-# Mechanistic Interpretability Assessment
+# Anthropic Mechanistic Interpretability Reproduction
 
-A comprehensive implementation of mechanistic interpretability analysis focusing on neural network activations and sparse autoencoders.
+A comprehensive implementation of mechanistic interpretability analysis focusing on neural network activations and sparse autoencoders, reproducing and extending Anthropic's research.
 
 ## 🎯 Project Overview
 
@@ -18,9 +18,8 @@ This project addresses the key questions in mechanistic interpretability:
 ### Installation
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd Mechanistic-Interpretability
+# Navigate to the project directory
+cd anthropic-reproduce
 
 # Set up environment
 chmod +x setup_local.sh
@@ -46,13 +45,12 @@ jupyter notebook
 ## 📁 Project Structure
 
 ```
-Mechanistic-Interpretability/
+anthropic-reproduce/
 ├── README.md                 # Project overview
 ├── requirements.txt          # Python dependencies
 ├── setup_local.sh           # Environment setup script
 ├── test_setup.py            # Environment test script
 ├── notebooks/               # Jupyter notebooks
-│   ├── 01_activations_analysis_local.ipynb
 │   └── 02_simple_activations_demo.ipynb
 ├── src/                     # Source code
 │   ├── __init__.py
@@ -62,8 +60,7 @@ Mechanistic-Interpretability/
 └── docs/                    # Documentation
     ├── LOCAL_GUIDE_EN.md
     ├── SOLUTION_GUIDE_EN.md
-    ├── SUBMISSION_CHECKLIST_EN.md
-    └── ...
+    └── SUBMISSION_CHECKLIST_EN.md
 ```
 
 ## 🔧 Core Features
@@ -95,7 +92,7 @@ Mechanistic-Interpretability/
 - Memory usage: ~2GB for GPT-2 analysis
 - Visualization: Real-time heatmap generation
 
-## 🎯 Assessment Coverage
+## 🎯 Research Coverage
 
 ### Core Questions Answered
 ✅ **What are activations?**
@@ -113,17 +110,11 @@ Mechanistic-Interpretability/
 - Monosemanticity achievement
 - Interpretability improvement
 
-### Technical Implementation
-- Complete activation extraction system
-- Visualization and analysis tools
-- Performance optimization
-- Error handling and troubleshooting
-
 ## 📚 Documentation
 
 - **Local Setup Guide**: `docs/LOCAL_GUIDE_EN.md`
 - **Solution Guide**: `docs/SOLUTION_GUIDE_EN.md`
-- **Submission Checklist**: `docs/SUBMISSION_CHECKLIST_EN.md`
+- **Research Checklist**: `docs/SUBMISSION_CHECKLIST_EN.md`
 
 ## 🔬 Experimental Results
 
@@ -142,12 +133,19 @@ The project demonstrates:
 
 ## 📝 License
 
-This project is created for educational and assessment purposes.
+This project is created for research and educational purposes.
 
 ## 🤝 Contributing
 
-This is an assessment project. For questions or issues, please refer to the documentation in the `docs/` folder.
+This is a research project. For questions or issues, please refer to the documentation in the `docs/` folder.
 
 ---
 
-**Note**: This project is optimized for M2 Mac with MPS acceleration but works on any machine with PyTorch support. 
+**Note**: This project is optimized for M2 Mac with MPS acceleration but works on any machine with PyTorch support.
+
+## 📋 Research Resources
+
+For detailed research methodology and background, see:
+- [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html)
+- [Monosemanticity at Home](https://jakeward.substack.com/p/monosemanticity-at-home-my-attempt)
+- [Monosemanticity Reproduction Repository](https://github.com/jnward/monosemanticity-repro) 

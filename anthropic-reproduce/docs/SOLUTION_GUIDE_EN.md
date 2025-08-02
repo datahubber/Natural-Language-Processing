@@ -83,7 +83,7 @@ The notebook demonstrates:
 - Similar words have similar activations
 - Position affects activation patterns
 
-## 🎯 Assessment Submission Content
+## 🎯 Research Documentation Content
 
 ### Required Content
 1. **Written Report** - Based on notebook analysis
@@ -123,4 +123,4 @@ Now you can:
 3. Observe activation analysis results
 4. Record your findings and insights
 
-This demo provides a complete foundation for mechanistic interpretability analysis, fully meeting assessment requirements! 
+This demo provides a complete foundation for mechanistic interpretability analysis, fully meeting research requirements! 
